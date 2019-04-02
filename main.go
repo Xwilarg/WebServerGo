@@ -33,6 +33,7 @@ func main() {
 	for i := 0; i < 100; i++ {
 		colors[i] = "255000000"
 	}
-    http.HandleFunc("/", getRequest)
-    log.Fatal(http.ListenAndServe(":8082", nil))
+	http.HandleFunc("/", getRequest)
+	fmt.Printf("Listening...\nPress ^C to exit\n");
+	log.Fatal(http.ListenAndServe(":8082", nil))
 }
